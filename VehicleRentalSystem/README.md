@@ -85,7 +85,7 @@ The application contains the following components:
 - Number of wheels must be 2 or 3
 - Motorcycle type must be sport, cruiser, or off-road
 - Cargo capacity must be between 0 and 100 tons
-= Transmission type must be manual or automatic
+- Transmission type must be manual or automatic
 - All required fields must be filled
 
 ## Technical Details
