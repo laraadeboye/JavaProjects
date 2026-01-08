@@ -54,15 +54,7 @@ public class EmployeeStreamProcessor {
     private static final Function<Employee, String> employeeNameDeptConcatenator = 
             employee -> employee.getName() + " - " + employee.getDepartment();
     
-    /**
-     * Additional Function: Formats employee information with salary
-     * Demonstrates function composition capability
-     */
-    private static final Function<Employee, String> detailedEmployeeInfo = 
-            employee -> String.format("%s (%s) - $%.2f", 
-                    employee.getName(), 
-                    employee.getDepartment(), 
-                    employee.getSalary());
+
     
     /**
      * Predicate for filtering employees above age threshold
