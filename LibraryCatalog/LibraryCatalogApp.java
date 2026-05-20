@@ -30,15 +30,24 @@ public class LibraryCatalogApp {
             int choice = readIntInput("Enter your choice: ");
 
             switch (choice) {
-                case 1 -> addItem();
-                case 2 -> removeItem();
-                case 3 -> retrieveItem();
-                case 4 -> catalog.displayAllItems();
-                case 5 -> {
+                case 1:
+                    addItem();
+                    break;
+                case 2:
+                    removeItem();
+                    break;
+                case 3:
+                    retrieveItem();
+                    break;
+                case 4:
+                    catalog.displayAllItems();
+                    break;
+                case 5:
                     System.out.println("\nThank you for using the Library Catalog. Goodbye!");
                     running = false;
-                }
-                default -> System.out.println("[ERROR] Invalid choice. Please enter a number between 1 and 5.");
+                    break;
+                default:
+                    System.out.println("[ERROR] Invalid choice. Please enter a number between 1 and 5.");
             }
         }
 
@@ -79,12 +88,13 @@ public class LibraryCatalogApp {
         System.out.println("  4. Other");
         int catChoice = readIntInput("Enter category choice  : ");
 
-        String category = switch (catChoice) {
-            case 1  -> "Book";
-            case 2  -> "DVD";
-            case 3  -> "Magazine";
-            default -> "Other";
-        };
+        String category;
+        switch (catChoice) {
+            case 1:  category = "Book";     break;
+            case 2:  category = "DVD";      break;
+            case 3:  category = "Magazine"; break;
+            default: category = "Other";
+        }
 
         try {
             LibraryItem<Integer> newItem = new LibraryItem<>(id, title, author, category);
